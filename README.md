@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# SmartDash CRM
+ 
+**SmartDash** — это современная B2B панель управления (Dashboard) для менеджмента услуг и клиентов. Проект разработан с использованием компонентного подхода, строгой типизации и передовых инструментов стилизации.
+ 
+---
+ 
+## 🛠 Технологический стек
+ 
+- **React 19** — библиотека для интерфейса.
+- **TypeScript** — типизация для надежности кода.
+- **Vite** — сверхбыстрая сборка проекта.
+- **Styled Components** — современный CSS-in-JS подход.
+- **Git Flow** — методология работы с ветками.
+---
+ 
+## 📁 Структура проекта (в процессе)
+ 
+- `src/components` — переиспользуемые UI элементы.
+- `src/styles` — глобальные стили и темы оформления.
+- `src/features` — основные модули приложения (Dashboard, Clients, и т.д.).
+---
+ 
+## 🚀 Планируемый функционал
+ 
+- [ ] **Core Layout**: Адаптивный сайдбар и шапка профиля.
+- [ ] **Analytics**: Графики и метрики эффективности (Recharts).
+- [ ] **Client Management**: Таблицы с данными, фильтрация и поиск.
+- [ ] **Forms**: Обработка заявок с валидацией (React Hook Form).
+- [ ] **Dark Mode**: Переключение тем оформления.
+---
+ 
+## 💻 Установка и запуск
+ 
+1. Клонировать репозиторий:
+   ```bash
+   git clone https://github.com/Rorodeathless1/smart-dash-crm.git
+   ```
+ 
+2. Установить зависимости:
+   ```bash
+   npm install
+   ```
+ 
+3. Запустить в режиме разработки:
+   ```bash
+   npm run dev
+   ```
+ 
+---
