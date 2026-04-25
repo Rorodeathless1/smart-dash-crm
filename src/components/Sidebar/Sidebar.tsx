@@ -42,12 +42,12 @@ export const Sidebar = () => {
           ))}
         </S.NavList>
       </nav>
-      <S.NavList style={{ marginTop: 'auto' }}>
-        <S.NavItem>
+      <S.SecondaryNavList>
+        <S.LogoutItem>
           <LogOut />
           <span>Выйти</span>
-        </S.NavItem>
-      </S.NavList>
+        </S.LogoutItem>
+      </S.SecondaryNavList>
     </S.SidebarContainer>
   );
 };

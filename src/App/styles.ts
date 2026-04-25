@@ -1,24 +1,21 @@
 import styled from 'styled-components';
-import type { ThemeType } from '../styles/theme';
 
-// 1. Главный контейнер на весь экран
-export const Layout = styled.div<{ theme: ThemeType }>`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: ${({ theme }) => theme.colors.background};
+export const PageTitle = styled.h1`
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
 `;
 
-// 2. Будущий сайдбар
-export const SidebarPlaceholder = styled.aside<{ theme: ThemeType }>`
-  width: 280px;
-  background-color: ${({ theme }) => theme.colors.surface};
-  border-right: 1px solid ${({ theme }) => theme.colors.border};
+export const PageSubtitle = styled.p`
+  color: #808191;
+  font-size: 16px;
+  margin-bottom: 32px;
 `;
 
-// 3. Область для основного контента
-export const MainContent = styled.main<{ theme: ThemeType }>`
-  flex: 1; /* Занимает всё оставшееся место справа */
-  padding: ${({ theme }) => theme.spacing(4)};
-  overflow-y: auto; /* Если контента много, будет скролл только тут */
+export const StatsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
 `;

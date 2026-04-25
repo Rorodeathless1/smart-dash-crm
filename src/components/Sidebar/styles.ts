@@ -17,7 +17,7 @@ export const SidebarContainer = styled.aside<{ theme: ThemeType }>`
 
   &:hover {
     width: 280px;
-    align-items: flex-start;
+    align-items: normal;
     padding: ${({ theme }) => `${theme.spacing(6)} ${theme.spacing(4)}`};
   }
 `;
@@ -77,6 +77,10 @@ export const NavList = styled.ul<{ theme: ThemeType }>`
   }
 `;
 
+export const SecondaryNavList = styled(NavList)`
+  margin-top: auto;
+`;
+
 export const NavItem = styled.li<{ theme: ThemeType; $active?: boolean }>`
   display: flex;
   align-items: center;
@@ -124,5 +128,12 @@ export const NavItem = styled.li<{ theme: ThemeType; $active?: boolean }>`
     ${SidebarContainer}:hover & {
       display: block;
     }
+  }
+`;
+
+export const LogoutItem = styled(NavItem)`
+  &:hover {
+    background-color: #ff525220; /* Бледный красный фон */
+    color: #ff5252; /* Яркий красный текст/иконка */
   }
 `;

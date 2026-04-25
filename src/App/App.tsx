@@ -1,15 +1,21 @@
-import { Sidebar } from '../components/Sidebar/Sidebar';
+import { Layout } from '../components/Layout/Layout';
+import { OrdersTable } from '../components/OrdersTable/OrdersTable';
+import { StatCard } from '../components/StatCard/StatCard';
+import { STATS_DATA } from '../constants/constants';
 import * as S from './styles';
 
 export const App = () => {
   return (
-    <S.Layout>
-      <Sidebar />
-
-      <S.MainContent>
-        <h1>SmartDash CRM</h1>
-        <p>Добро пожаловать в рабочую область.</p>
-      </S.MainContent>
-    </S.Layout>
+    <Layout>
+      {/* Всё, что внутри Layout, попадет в S.Content через props.children */}
+      <S.PageTitle>Панель управления</S.PageTitle>
+      <S.PageSubtitle>Добро пожаловать в рабочую область.</S.PageSubtitle>
+      <S.StatsGrid>
+        {STATS_DATA.map((stat) => (
+          <StatCard key={stat.id} {...stat} />
+        ))}
+      </S.StatsGrid>
+      <OrdersTable />
+    </Layout>
   );
 };
